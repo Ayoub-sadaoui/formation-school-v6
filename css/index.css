@@ -1,0 +1,26 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+.logo img {
+  height: 50px;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  width: 100%;
+}
+
+.toggle {
+  width: 20px;
+}
