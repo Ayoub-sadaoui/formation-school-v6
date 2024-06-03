@@ -1,5 +1,5 @@
 <?php
-include('database.php');
+include('db.php');
 
 $requestMethod = $_SERVER['REQUEST_METHOD'];
 

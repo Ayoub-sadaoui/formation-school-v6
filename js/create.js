@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function submitFeedback(email, comment) {
-    fetch("http://localhost/school-formation-v3/php/com.php", {
+    fetch("http://localhost/formation-school-v6/php/server.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
