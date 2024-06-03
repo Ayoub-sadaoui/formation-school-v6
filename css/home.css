@@ -1,6 +1,6 @@
 @font-face {
   font-family: Montserrat;
-  src: url(./lib/Montserrat/Montserrat-Bold.ttf);
+  src: url(./assets/Montserrat/Montserrat-Bold.ttf);
   font-weight: 600;
 }
 * {
@@ -17,7 +17,8 @@ html {
   font-family: "Inter", "Inter Placeholder", sans-serif;
 }
 button {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Caassetsri, "Trebuchet MS",
+    sans-serif;
 }
 
 h3 {
@@ -528,7 +529,8 @@ textarea {
   color: #fff;
   font-size: 16px;
   font-weight: 600;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Caassetsri, "Trebuchet MS",
+    sans-serif;
 
   width: 105%;
   height: 47px;

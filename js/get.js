@@ -30,7 +30,7 @@ function displayComments(comments) {
       htmlContent += `
             <div class="comment">
                 <div class="commenth">
-                <img src="lib/profile-icon-comments.png" alt="" />
+                <img src="assets/profile-icon-comments.png" alt="" />
                 <h5>${comment.email}</h5>
               </div>
               <p>${comment.COMMENT}😉</p>
