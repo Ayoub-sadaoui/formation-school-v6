@@ -3,7 +3,7 @@ const commentsContainer = document.getElementById("comments-area");
 
 // Function to retrieve and display comments from the server
 function fetchComments() {
-  const url = "http://localhost/formation-school-v6/php/com.php";
+  const url = "http://localhost/formation-school-v6/php/server.php";
 
   // Fetch comments from the specified URL
   fetch(url)
