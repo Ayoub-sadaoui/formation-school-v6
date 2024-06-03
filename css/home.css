@@ -8,12 +8,13 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --background: #fff;
-  --bg2: #7482ff;
-  --h3: #f5c753;
+  --background: #272286;
+  --bg2: #31c2dc;
+  --h3: #272286;
 }
-body {
-  background-color: var(--background);
+html {
+  scroll-behavior: smooth;
+  font-family: "Inter", "Inter Placeholder", sans-serif;
 }
 button {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -21,10 +22,10 @@ button {
 
 h3 {
   font-family: "Montserrat", sans-serif;
-  color: var(--bg2);
+  color: var(--h3);
 }
 .header {
-  background-color: var(--bg2);
+  background-color: var(--background);
   width: 100%;
   height: 70px;
   display: grid;
@@ -34,9 +35,10 @@ h3 {
   box-shadow: 2px 3px 15px 2px rgba(0, 0, 0, 0.25);
   z-index: 10;
   border-radius: 0px 0px 10px 10px;
+  border-bottom: #fff 1.5px solid;
 }
 .header-h1 {
-  color: #000000;
+  color: #fff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 40px;
@@ -75,17 +77,28 @@ h3 {
   justify-content: start;
   align-items: center;
   overflow: hidden;
+  background-color: var(--background);
 }
 .hero .hero-img {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
+}
+.hero .hero-img .circle {
+  position: absolute;
+  width: 500px;
+  height: 500px;
   background-color: var(--bg2);
+  z-index: 1;
+  border-radius: 50%;
 }
 .hero img {
+  position: absolute;
+  z-index: 2;
   width: 100%;
 }
 
@@ -99,13 +112,13 @@ h3 {
   height: 100%;
   gap: 0px;
   border-radius: 8px;
-  padding: 130px 90px;
+  padding: 130px 120px;
 }
 .hero .hero-content h1 {
   width: 74%;
   font-weight: 600;
   font-family: "Instrument Sans", "Instrument Sans Placeholder", sans-serif;
-  color: #333333;
+  color: #ffffff;
   font-size: 61px;
   letter-spacing: -0.3px;
   line-height: 1.3;
@@ -129,31 +142,30 @@ h3 {
 
 .hero .hero-content .buttons {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 50px;
   margin-top: 70px;
 }
 .hero .hero-content .CTA-btn {
-  width: auto;
-  height: 46px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 18px 20px 18px;
-  background-color: var(--bg2);
-  align-content: center;
-  gap: 15;
-  border-radius: 8px;
-  font-weight: 700;
   font-family: "Inter", "Inter Placeholder", sans-serif;
+  text-align: center;
   color: #ffffff;
+  font-weight: 700;
   font-size: 18px;
-  letter-spacing: 0em;
-  line-height: 1.2;
   border: none;
+  padding: 20px 40px;
+  background-color: #31c2dc;
+  transition: smooth;
+  border: 3px solid var(--bg2);
+}
+.outline {
+  background-color: transparent !important;
+  color: var(--bg2) !important;
+}
+.outline:hover {
+  background-color: var(--bg2) !important;
+  color: #fff !important;
 }
 .hero .hero-content .CTA-btn:hover {
   background-color: #071bd1;
@@ -205,7 +217,6 @@ h3 {
   max-width: 100%;
   height: 1200px;
   overflow: hidden;
-  background-color: var(--bg2);
 }
 
 /* ========================== */
@@ -225,32 +236,32 @@ h3 {
   font-weight: 600;
   padding-left: 10px;
 }
-.main-section .formations h3 {
-  color: white;
-}
+
 .main-section .formations .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 50px;
+  column-gap: 80px;
 }
 
 .main-section .formations .container .formation {
+  position: relative;
   width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   box-shadow: 0px 0.7961918735236395px 2.3885756205709185px -0.625px rgba(0, 0, 0, 0.05),
     0px 2.414506143104518px 7.2435184293135535px -1.25px rgba(0, 0, 0, 0.05),
     0px 6.382653521484461px 19.147960564453385px -1.875px rgba(0, 0, 0, 0.05),
     0px 20px 60px -2.5px rgba(0, 0, 0, 0.05);
-  background-color: #ffffff;
-  border-radius: 10px;
+  background-color: var(--background);
+  overflow: hidden;
+  border-radius: 2px;
 }
 .main-section .formations .container .formation .image {
-  height: 263px;
+  height: 233px;
   width: 100%;
   overflow: hidden;
 }
@@ -262,7 +273,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 7px 3px;
+  padding: 20px 25px;
   align-content: flex-start;
   gap: 15px;
 }
@@ -286,14 +297,39 @@ h3 {
   width: 25px;
 }
 .main-section .formation .formation-info h4 {
-  font-size: 22px;
-
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-  color: var(--token-b9c3c957-2c66-49c4-9732-fa196fddac20, #001122);
+  font-weight: 600;
+  font-family: "Inter", "Inter Placeholder", sans-serif;
+  color: #ffffff;
   font-size: 19px;
-  letter-spacing: -0.5px;
+  letter-spacing: 0.5px;
   text-align: left;
+}
+.main-section .formation .formation-info p {
+  font-weight: 400;
+  font-family: "Inter", "Inter Placeholder", sans-serif;
+  color: #c7c7c7;
+  font-size: 16px;
+}
+.rating {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+  background-color: #fff;
+  align-items: center;
+  border-radius: 4px;
+  gap: 2px;
+  top: 5px;
+  left: 5px;
+}
+.rating p {
+  font-weight: 700 !important;
+  font-family: "Inter", "Inter Placeholder", sans-serif;
+  color: var(--background) !important;
+  font-size: 14px !important;
+}
+.rating img {
+  width: 14px;
 }
 .main-section .formation .formation-info .btns {
   width: 100%;
@@ -304,13 +340,7 @@ h3 {
   gap: 3px;
   align-items: center;
 }
-.main-section .formation .formation-info .btns div p {
-  font-weight: 700;
-  font-family: "Inter", "Inter Placeholder", sans-serif;
-  color: #ffc107;
-  font-size: 14px;
-  text-align: left;
-}
+
 .main-section .formation .formation-info .btns div img {
   width: 17px;
   height: 15px;
@@ -321,15 +351,9 @@ h3 {
   font-family: "Inter", "Inter Placeholder", sans-serif;
   color: #fff;
   width: 100%;
-  padding: 10px 15px;
-  box-shadow: 0px 0.5573343114665477px 0.5573343114665477px -0.9375px rgba(0, 0, 0, 0.15),
-    0px 1.6901543001731625px 1.6901543001731625px -1.875px rgba(0, 0, 0, 0.13793),
-    0px 4.467857465039123px 4.467857465039123px -2.8125px rgba(0, 0, 0, 0.11809),
-    0px 14px 14px -3.75px rgba(0, 0, 0, 0.05);
-  background-color: #7381ff;
-  border-radius: 8px;
-  outline: none;
   border: none;
+  padding: 10px;
+  background-color: #30c2db;
 }
 .start-btn:hover {
   background-color: #150573;
@@ -386,7 +410,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 80px;
-  animation: scroll 20s linear infinite;
+  animation: scroll 20s linear initial;
 }
 @keyframes scroll {
   to {
@@ -397,54 +421,48 @@ h3 {
 .main-section .promotions .promotion {
   width: 324px;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 2px -2px 12px 4px rgba(110, 110, 110, 0.25);
-  border-radius: 24px;
   overflow: hidden;
+  gap: 35px;
+  padding: 5px 20px;
 }
 
 .main-section .promotions .promotion .promoh {
-  width: 100%;
-  background-color: var(--bg2);
+  width: 30%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 5px;
   gap: 10px;
 }
-.promotion .promoh p {
-  font-weight: 500;
-  font-family: "Instrument Sans", "Instrument Sans Placeholder", sans-serif;
-  color: #ffffff;
-  font-size: 39px;
-}
 .promotion .promoh img {
-  width: 50px;
+  width: 100px;
 }
 .promotion .promo-desc {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   gap: 1rem;
-  padding: 15px;
+  padding: 10px 0;
 }
 .promotion .promo-desc h4 {
-  text-emphasis: center;
-  font-family: "Instrument Sans", "Instrument Sans Placeholder", sans-serif;
-  letter-spacing: 0.7px;
-  font-size: 17px;
-  color: var(--bg2);
+  font-weight: 400;
+  font-family: "ADLaM Display", sans-serif;
+  color: var(--background);
+  font-size: 42px;
+  line-height: 40px;
 }
 .promotion .promo-desc h5 {
-  text-align: center;
-  font-weight: 600;
-  font-family: "Inter", "Inter Placeholder", sans-serif;
-  color: #5c5c5c;
-  font-size: 16px;
-  text-wrap: wrap;
+  font-weight: 500;
+  font-family: "Roboto", "Roboto Placeholder", sans-serif;
+  color: #000000;
+  font-size: 19px;
+
+  text-align: left;
 }
 
 /* ========================== */
@@ -457,13 +475,14 @@ h3 {
   align-items: start;
   justify-content: center;
   gap: 50px;
+  padding: 100px;
 }
 .comments-section .comForm {
   min-width: 400px;
-  width: 100%;
+  width: 90%;
   position: sticky;
   top: 0px;
-  padding-top: 100px;
+  padding-top: 10px;
   gap: 120px;
   display: flex;
   flex-direction: column;
@@ -480,7 +499,7 @@ h3 {
   align-items: center;
   gap: 0px;
   margin-top: 50px;
-  width: 70%;
+  width: 100%;
 }
 .full {
   width: 100%;
@@ -492,10 +511,12 @@ textarea {
   outline: none;
   width: 96%;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  padding: 8px;
-  border-bottom: 2.5px solid var(--bg2);
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #000000;
 
   font-weight: 400;
   font-family: "Instrument Sans", "Instrument Sans Placeholder", sans-serif;
@@ -509,7 +530,7 @@ textarea {
   font-weight: 600;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
-  width: 100%;
+  width: 105%;
   height: 47px;
   display: flex;
   justify-content: center;
@@ -526,12 +547,13 @@ textarea {
 /* =================================== */
 
 .comments-place {
+  padding-top: 10px;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  background-color: var(--bg2);
+  height: 620px;
+  background-color: var(--background);
   align-items: center;
-  padding-top: 100px;
+  overflow: hidden;
 }
 .comments-place h3 {
   color: #fff;
@@ -542,6 +564,11 @@ textarea {
   margin-top: 50px;
   width: 100%;
   align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: 0;
+  scrollbar-color: transparent;
+  margin-left: 30px;
 }
 #comments-area .comment {
   width: 70%;
@@ -549,21 +576,29 @@ textarea {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  padding: 20px 15px;
-  gap: 20px;
+  padding: 20px 10px;
+  gap: 16px;
   margin-top: 30px;
   box-shadow: 0px 0px 0px 1px rgba(23, 23, 23, 0.05);
-  background-color: rgba(247, 247, 247, 0.74);
-  border-radius: 14px;
+  border-bottom: 2px solid #fff;
+}
+#comments-area .comment .commenth {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#comments-area .comment .commenth img {
+  width: 30px;
 }
 #comments-area .comment h5 {
+  color: var(--bg2);
 }
 #comments-area .comment p {
   font-weight: 400;
   font-family: "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif, "System Default", sans-serif;
-  color: #171717;
+  color: #fff;
   font-size: 18px;
 }
 
@@ -583,7 +618,7 @@ textarea {
     rgba(0, 0, 0, 0.086) 2px 10px 46.911px -3.25px;
 }
 .side-bar {
-  background-color: #ffffff;
+  background-color: var(--bg2);
   width: 100%;
   position: absolute;
 }
@@ -632,9 +667,13 @@ textarea {
 .personel-info .info div {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-top: 10px;
 }
+.personel-info .info div p {
+  color: #fff;
+}
+
 .personel-info .info div img {
   width: 25px;
   height: 25px;
@@ -648,22 +687,23 @@ textarea {
 .links .links-content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 .links .links-content p {
+  border-bottom: 2px solid var(--background);
   padding: 5px;
-  padding-left: 20px;
+  font-weight: 500;
   text-decoration: none;
-  border-bottom: 1px solid var(--bg2);
   text-align: center;
   transition: smooth;
+  font-family: "Inter", "Inter Placeholder", sans-serif;
 }
 .links .links-content p:hover a {
-  color: var(--bg2);
+  color: var(--background);
   font-weight: 600;
 }
 
 a {
   text-decoration: none;
-  color: #383838;
+  color: #fff;
 }
